@@ -1,0 +1,12 @@
+python-dateutil==2.9.0
+pytz==2025.2
+Faker>=28.0.0
+pytest>=8.0.0
+Flask>=3.0.0
+
+# Package descriptions:
+# python-dateutil - Management of multiple date formats
+# pytz - Management of different time zones
+# Faker - Generate realistic fake data for testing and demos
+# pytest - Testing framework for Python
+# Flask - Lightweight web framework for UI

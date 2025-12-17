@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIEM Event Log File Processor Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🛡️ SIEM Event Log File Processor Dashboard</h1>
+            <button id="refreshBtn" class="btn btn-primary">🔄 Refresh</button>
+        </header>
+
+        <!-- Statistics Cards -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-content">
+                    <h3 id="totalEvents">0</h3>
+                    <p>Total Events</p>
+                </div>
+            </div>
+            <div class="stat-card high">
+                <div class="stat-icon">🔴</div>
+                <div class="stat-content">
+                    <h3 id="highThreat">0</h3>
+                    <p>High Threat</p>
+                </div>
+            </div>
+            <div class="stat-card medium">
+                <div class="stat-icon">🟡</div>
+                <div class="stat-content">
+                    <h3 id="mediumThreat">0</h3>
+                    <p>Medium Threat</p>
+                </div>
+            </div>
+            <div class="stat-card low">
+                <div class="stat-icon">🟢</div>
+                <div class="stat-content">
+                    <h3 id="lowThreat">0</h3>
+                    <p>Low Threat</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-section">
+            <h2>📋 Filters</h2>
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="threatFilter">Threat Level:</label>
+                    <select id="threatFilter" class="filter-input">
+                        <option value="">All</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="ipFilter">Source IP:</label>
+                    <input type="text" id="ipFilter" class="filter-input" placeholder="Search IP...">
+                </div>
+                <div class="filter-group">
+                    <label for="limitFilter">Limit:</label>
+                    <select id="limitFilter" class="filter-input">
+                        <option value="50">50</option>
+                        <option value="100" selected>100</option>
+                        <option value="200">200</option>
+                        <option value="500">500</option>
+                    </select>
+                </div>
+                <button id="applyFilters" class="btn btn-primary">Apply Filters</button>
+                <button id="clearFilters" class="btn btn-secondary">Clear</button>
+            </div>
+        </div>
+
+        <!-- Events Table -->
+        <div class="table-section">
+            <div class="table-header">
+                <h2>📑 Security Events Processed</h2>
+                <span id="eventCount" class="event-count">0 events</span>
+            </div>
+            <div class="table-container">
+                <table id="eventsTable">
+                    <thead>
+                        <tr>
+                            <th>Datetime</th>
+                            <th>Source IP</th>
+                            <th>Destination IP</th>
+                            <th>Port</th>
+                            <th>Event Type</th>
+                            <th>Priority</th>
+                            <th>Threat Level</th>
+                        </tr>
+                    </thead>
+                    <tbody id="eventsTableBody">
+                        <tr>
+                            <td colspan="7" class="loading">Loading events...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Last Updated: <span id="lastUpdated">Never</span></p>
+            <p>SIEM Event Log File Processor | Functional Programming Paradigm</p>
+            <p>Version: 1.0.0</p>
+            <p>Author: Letcia Gainza | QA Engineer | 2025 </p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+
+</html>
