@@ -1,19 +1,19 @@
 # SIEM Event Log File Processor
 
-This project involves creating a Python program to automate actions for checking log information on a security monitoring program within a network, as a SIEM (system information and event manager). The program processes security events archived in a specific log file as input, following a defined format.
-The program is built using the Functional Programming Paradigm intented to:
+This project involves creating a Python program to automate actions for checking log information on a security monitoring program within a network. The program processes security events archived in a specific log file as input, following a defined format.
+The program is built using the Functional Programming Paradigm, intended to:
 
-- After previous problem analysis, was determined that the system will consume the and process the event log data separated as string, numbers and dates, so it will not be focused on the event log file as an object instance, but as a list of dictionaries.
-- Each function designed as a basic function is responsible for a specific task, making the code more modular and easier to maintain and keeping the cohesion principle.
-- Only one function is the principle module called as complex function, it is going to call the other functions to process the event log file, is recomended used the mininmal number of parameters (functions) to pass to the complex function, to control the acoplament risk of the system.
+- After previous problem analysis, it was determined that the system will consume and process the event log data separated as strings, numbers, and dates, so it will not focus on the event log file as an object instance, but as a list of dictionaries.
+- Each function designed as a basic function is responsible for a specific task, making the code more modular and easier to maintain, and keeping the cohesion principle.
+- Only one function is the principal module called a complex function, it is going to call the other functions to process the event log file. It  is recommended to use the minimal number of parameters (functions) to pass to the complex function to control the coupling risk of the system.
 
 ## QA Perspective
 
-As a QA professional behind of the project, I include this practice:
+As a QA professional behind the project, I include this practice:
 
 - A demo to validate the functionality of the program
 - A test directory to validate the functionality of each function and the complex function.
-- A helper directory to manage test environment, data and logging to avoid code duplication and hardcode.
+- A helper directory to manage the test environment, data, and logging to avoid code duplication and hardcoding.
 
 ## Project Documentation
 
@@ -24,7 +24,7 @@ The project documentation is as follows:
 ## Quick UI View
 
 <p align="center">
-<img src="ui/static/images/siem_event_log_file_processor.png" alt="SIEM Event Log File Processor">
+<img src="ui/static/images/siem_event_log_processor..png" alt="SIEM Event Log File Processor">
 </p>
 
 ## Directory Structure
@@ -85,7 +85,7 @@ The directory structure is as follows:
 
 ## Using the project
 
-To use the project you can fallow the next steps:
+To use the project, you can follow the next steps:
 
 1. Clone the repository (or download the zip file):
 
@@ -108,7 +108,7 @@ source venv/bin/activate
 4. Install the requirements:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requeriments.txt
 ```
 
 5. Run the demo:
@@ -125,7 +125,7 @@ python3 -m pytest tests/ -v
 
 7. Run the Web UI (Optional):
 
-- By default the web ui will run on port 5000:
+- By default, the web ui will run on port 5000:
 
 ```bash
 cd ui
@@ -145,14 +145,14 @@ Then open your browser to `http://localhost:5000` to access the dashboard, or `h
 
 8. Generate a new event log file (Optional):
 
-- Open new terminal and run the next command:
+- Open a new terminal and run the next command:
 `python3 -m venv venv`
 
 - Activate the virtual environment:
 `source venv/bin/activate`
 
 - Install the requirements:
-`pip install -r requirements.txt`
+`pip install -r requeriments.txt`
 
 - Run the demo:
 `python3 -m demo.demo_event_siem_log_processor`
@@ -218,3 +218,4 @@ A modern web-based dashboard for visualizing and monitoring SIEM events in real-
 © 2025 LetyPG. All Rights Reserved.
 
 This project is part of a professional portfolio and is intended for demonstration and educational purposes. Unauthorized copying, modification, distribution, or use of this code for commercial purposes is strictly prohibited without explicit permission from the author.
+

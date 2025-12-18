@@ -47,6 +47,8 @@ Reads a file and returns a list of dictionaries, each representing a security ev
 9. **Return Events List:**  
     Return the list of event dictionaries.
 
+</details>
+
 ### Normalize Event Datetime (`src/basic_functions/normalize_event_datetime.py`)
 
 **Functionality**  

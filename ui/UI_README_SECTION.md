@@ -5,10 +5,10 @@ This project involves creating a Python program to automate actions for checking
 ## Quick UI View
 
 <p align="center">
-<img src="ui/static/images/siem_event_log_file_processor.png" alt="SIEM Event Log File Processor">
+<img src="static/images/siem_event_log_processor..png" alt="SIEM Event Log File Processor">
 </p>
 <p align="center">
-<img src="ui/static/images/ui_complete_view.png" alt="UI Complete View">
+<img src="static/images/ui_complete_view.png" alt="UI Complete View">
 </p>
 
 The program is built using the Functional Programming Paradigm intented to:
