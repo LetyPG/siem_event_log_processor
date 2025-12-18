@@ -43,7 +43,7 @@ source venv/bin/activate
 4. Install the requirements:
 
 ```bash
-pip install -r requeriments.txt
+pip install -r requirements.txt
 ```
 
 5. Run the Web UI (Optional):

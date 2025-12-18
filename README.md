@@ -1,6 +1,6 @@
 # SIEM Event Log File Processor
 
-This project involves creating a Python program to automate actions for checking log information on a security monitoring program within a network. The program processes security events archived in a specific log file as input, following a defined format.
+This project involves creating a Python program to automate actions for checking log information on a security monitoring program within a network, as a SIEM (system information and event manager). The program processes security events archived in a specific log file as input, following a defined format.
 The program is built using the Functional Programming Paradigm intented to:
 
 - After previous problem analysis, was determined that the system will consume the and process the event log data separated as string, numbers and dates, so it will not be focused on the event log file as an object instance, but as a list of dictionaries.
@@ -108,7 +108,7 @@ source venv/bin/activate
 4. Install the requirements:
 
 ```bash
-pip install -r requeriments.txt
+pip install -r requirements.txt
 ```
 
 5. Run the demo:
@@ -152,7 +152,7 @@ Then open your browser to `http://localhost:5000` to access the dashboard, or `h
 `source venv/bin/activate`
 
 - Install the requirements:
-`pip install -r requeriments.txt`
+`pip install -r requirements.txt`
 
 - Run the demo:
 `python3 -m demo.demo_event_siem_log_processor`
