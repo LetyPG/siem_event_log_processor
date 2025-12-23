@@ -1,5 +1,39 @@
+#  MVP: SIEM Event Log File Processor
 
-# Main Source Code (`src/basic_functions/`)
+A Minimum Viable Product (MVP) was developed to classify cybersecurity threats based on network logs detected by a Security Information and Event Management (SIEM) system, acting as a capability extension.
+
+- **The Problem:**
+Classifying threat levels after monitoring cyberattack events in order to facilitate decision-making and improve resilience.
+
+- **Analysis:**
+
+   - Input: Data comes from a SIEM application, a system that monitors events in a network that may indicate malicious activity. This solution extends the SIEM’s capabilities.
+   - The system needs to read these data, extract relevant information, unify time formats, assign priorities, and classify the threat (impact severity).
+   - Output: Visualization of events with their relevant information and threat level, with filtering capabilities based on key data such as IP address.
+
+- **Solution Design:**
+  - Paradigm: Functional Programming (use of pure functions).
+  - Architecture: Model–View–Controller (MVC), using the Flask framework to provide an observability interface.
+
+- **Algorithm (functions):**
+  - Extraction: Reading and iterating over events, extracting data (datetime, IP, port, event type).
+  - Normalization: Converting dates/times to UTC format.
+  - Prioritization: Assigning values (1–5) based on cybersecurity standards.
+  - Classification: Defining impact level (Low, Medium, High) according to the priority range.
+
+- **Verification:**
+  - Tests were implemented to validate each function, followed by a demo to verify full system integration.
+
+- **Applied Quality Practices:**
+   - High cohesion and low coupling → improved scalability and maintainability.
+   - Unit testing and system functionality validation.
+   - Separation of test data and configuration management.
+   - Function naming that clearly declares intent using action-oriented verbs.
+   - Strict adherence to the MVC design pattern to ensure separation of concerns.
+
+____
+
+## Main Source Code (`src/basic_functions/`)
 
 **Packages and Modules Imported:**
 
